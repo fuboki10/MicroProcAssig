@@ -23,7 +23,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 0 -96 168 -80)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "S[2..0]" (rect 5 0 39 12)(font "Arial" ))
+	(text "S[2..0]" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 24 32 192 48)
+	(rect -176 40 -8 56)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "INPUT1[3..0]" (rect 5 0 70 12)(font "Arial" ))
+	(text "INPUT1[3..0]" (rect 5 0 69 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -200 304 -32 320)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "INPUT2[1..0]" (rect 5 0 65 17)(font "Intel Clear" ))
+	(text "INPUT2[1..0]" (rect 5 0 64 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 8 688 176 704)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -975,16 +975,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 784 608)
-	(pt 800 608)
-	(bus)
-)
-(connector
-	(pt 800 608)
-	(pt 800 736)
-	(bus)
-)
-(connector
 	(pt 800 736)
 	(pt 800 936)
 	(bus)
@@ -1118,7 +1108,6 @@ refer to the applicable agreement for further details.
 (junction (pt 384 736))
 (junction (pt 448 736))
 (junction (pt 600 736))
-(junction (pt 800 736))
 (junction (pt 312 824))
 (junction (pt 320 872))
 (junction (pt 544 824))
