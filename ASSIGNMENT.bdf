@@ -101,7 +101,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1232 1064 1408 1080)
+	(rect 1176 -24 1352 -8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "OUTPUT[3..0[" (rect 90 0 159 12)(font "Arial" ))
 	(pt 0 8)
@@ -599,7 +599,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 680 -48 800 80)
+	(rect 680 -48 808 80)
 	(text "ALU4bit" (rect 5 0 54 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
@@ -638,35 +638,14 @@ refer to the applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
-		(pt 120 32)
+		(pt 128 32)
 		(output)
-		(text "Y[0]" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
-		(text "Y[0]" (rect 74 27 99 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 120 32)(pt 104 32))
-	)
-	(port
-		(pt 120 48)
-		(output)
-		(text "Y[1]" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
-		(text "Y[1]" (rect 74 43 99 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 120 48)(pt 104 48))
-	)
-	(port
-		(pt 120 64)
-		(output)
-		(text "Y[2]" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
-		(text "Y[2]" (rect 74 59 99 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 120 64)(pt 104 64))
-	)
-	(port
-		(pt 120 80)
-		(output)
-		(text "Y[3]" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
-		(text "Y[3]" (rect 74 75 99 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 120 80)(pt 104 80))
+		(text "Y[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "Y[3..0]" (rect 69 27 107 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 104 112))
+		(rectangle (rect 16 16 112 112))
 	)
 )
 (connector
@@ -692,11 +671,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 248 624)
 	(pt 280 624)
-)
-(connector
-	(pt 992 1072)
-	(pt 1232 1072)
-	(bus)
 )
 (connector
 	(pt 176 696)
@@ -1087,6 +1061,61 @@ refer to the applicable agreement for further details.
 	(pt 680 0)
 	(bus)
 )
+(connector
+	(pt 984 600)
+	(pt 936 600)
+	(bus)
+)
+(connector
+	(pt 648 616)
+	(pt 616 616)
+	(bus)
+)
+(connector
+	(pt 616 616)
+	(pt 616 496)
+	(bus)
+)
+(connector
+	(pt 936 600)
+	(pt 936 496)
+	(bus)
+)
+(connector
+	(pt 936 496)
+	(pt 936 -16)
+	(bus)
+)
+(connector
+	(pt 280 608)
+	(pt 256 608)
+	(bus)
+)
+(connector
+	(pt 256 608)
+	(pt 256 496)
+	(bus)
+)
+(connector
+	(pt 256 496)
+	(pt 616 496)
+	(bus)
+)
+(connector
+	(pt 616 496)
+	(pt 936 496)
+	(bus)
+)
+(connector
+	(pt 808 -16)
+	(pt 936 -16)
+	(bus)
+)
+(connector
+	(pt 936 -16)
+	(pt 1176 -16)
+	(bus)
+)
 (junction (pt 624 696))
 (junction (pt 248 696))
 (junction (pt 56 336))
@@ -1102,3 +1131,6 @@ refer to the applicable agreement for further details.
 (junction (pt 512 280))
 (junction (pt 192 -72))
 (junction (pt 600 -16))
+(junction (pt 936 496))
+(junction (pt 616 496))
+(junction (pt 936 -16))
