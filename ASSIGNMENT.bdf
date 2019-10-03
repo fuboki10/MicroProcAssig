@@ -103,7 +103,7 @@ refer to the applicable agreement for further details.
 	(output)
 	(rect 1176 -24 1352 -8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "OUTPUT[3..0[" (rect 90 0 159 12)(font "Arial" ))
+	(text "OUTPUT[3..0]" (rect 90 0 159 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -601,7 +601,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 680 -48 808 80)
 	(text "ALU4bit" (rect 5 0 54 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
+	(text "ALU4B" (rect 8 107 41 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)

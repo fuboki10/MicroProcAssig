@@ -1,0 +1,531 @@
+|ASSIGNMENT
+OUTPUT[0] <= ALU4bit:ALU4B.Y[0]
+OUTPUT[1] <= ALU4bit:ALU4B.Y[1]
+OUTPUT[2] <= ALU4bit:ALU4B.Y[2]
+OUTPUT[3] <= ALU4bit:ALU4B.Y[3]
+S[0] => SELECTOR:inst.S1
+S[1] => ALU4bit:ALU4B.S0
+S[2] => ALU4bit:ALU4B.S1
+GND => ALU4bit:ALU4B.GND
+GND => SELECTOR:inst.GND
+GND => SELECTOR:inst.S0
+GND => SELECTOR:inst2.GND
+GND => SELECTOR:inst1.GND
+INPUT1[0] => SELECTOR:inst.A[0]
+INPUT1[0] => SELECTOR:inst2.S0
+INPUT1[0] => SELECTOR:inst1.S0
+INPUT1[1] => SELECTOR:inst.A[1]
+INPUT1[1] => SELECTOR:inst2.S1
+INPUT1[2] => SELECTOR:inst.A[2]
+INPUT1[3] => SELECTOR:inst.A[3]
+CLK => LPM_SHIFTREG:A.clock
+CLK => LPM_SHIFTREG:B.clock
+CLK => LPM_SHIFTREG:C.clock
+INPUT2[0] => ~NO_FANOUT~
+INPUT2[1] => SELECTOR:inst1.S1
+
+
+|ASSIGNMENT|ALU4bit:ALU4B
+Y[0] <= ALU1bit:inst2.F
+Y[1] <= ALU1bit:inst.F
+Y[2] <= ALU1bit:inst1.F
+Y[3] <= ALU1bit:inst3.F
+A[0] => ALU1bit:inst2.A
+A[1] => ALU1bit:inst.A
+A[2] => ALU1bit:inst1.A
+A[3] => ALU1bit:inst3.A
+B[0] => ALU1bit:inst2.B
+B[1] => ALU1bit:inst.B
+B[2] => ALU1bit:inst1.B
+B[3] => ALU1bit:inst3.B
+GND => ALU1bit:inst2.Cin
+S1 => ALU1bit:inst2.s1
+S1 => ALU1bit:inst.s1
+S1 => ALU1bit:inst1.s1
+S1 => ALU1bit:inst3.s1
+S0 => ALU1bit:inst2.s0
+S0 => ALU1bit:inst.s0
+S0 => ALU1bit:inst1.s0
+S0 => ALU1bit:inst3.s0
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2
+F <= MUX41:inst.Q
+s0 => MUX41:inst.S0
+A => FullAdder1bit:inst10.A
+A => inst9.IN0
+A => MUX41:inst.D0
+B => FullAdder1bit:inst10.B
+B => inst9.IN1
+B => MUX41:inst.D1
+Cin => FullAdder1bit:inst10.Cin
+s1 => MUX41:inst.S1
+Cout <= FullAdder1bit:inst10.Cout
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|FullAdder1bit:inst10
+Out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst
+F <= MUX41:inst.Q
+s0 => MUX41:inst.S0
+A => FullAdder1bit:inst10.A
+A => inst9.IN0
+A => MUX41:inst.D0
+B => FullAdder1bit:inst10.B
+B => inst9.IN1
+B => MUX41:inst.D1
+Cin => FullAdder1bit:inst10.Cin
+s1 => MUX41:inst.S1
+Cout <= FullAdder1bit:inst10.Cout
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|FullAdder1bit:inst10
+Out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1
+F <= MUX41:inst.Q
+s0 => MUX41:inst.S0
+A => FullAdder1bit:inst10.A
+A => inst9.IN0
+A => MUX41:inst.D0
+B => FullAdder1bit:inst10.B
+B => inst9.IN1
+B => MUX41:inst.D1
+Cin => FullAdder1bit:inst10.Cin
+s1 => MUX41:inst.S1
+Cout <= FullAdder1bit:inst10.Cout
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1|FullAdder1bit:inst10
+Out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3
+F <= MUX41:inst.Q
+s0 => MUX41:inst.S0
+A => FullAdder1bit:inst10.A
+A => inst9.IN0
+A => MUX41:inst.D0
+B => FullAdder1bit:inst10.B
+B => inst9.IN1
+B => MUX41:inst.D1
+Cin => FullAdder1bit:inst10.Cin
+s1 => MUX41:inst.S1
+Cout <= FullAdder1bit:inst10.Cout
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|FullAdder1bit:inst10
+Out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|SELECTOR:inst
+OUT[0] <= MUX41:inst.Q
+OUT[1] <= MUX41:inst1.Q
+OUT[2] <= MUX41:inst2.Q
+OUT[3] <= MUX41:inst3.Q
+S0 => MUX41:inst.S0
+S0 => MUX41:inst1.S0
+S0 => MUX41:inst2.S0
+S0 => MUX41:inst3.S0
+C[0] => MUX41:inst.D2
+C[1] => MUX41:inst1.D2
+C[2] => MUX41:inst2.D2
+C[3] => MUX41:inst3.D2
+S1 => MUX41:inst.S1
+S1 => MUX41:inst1.S1
+S1 => MUX41:inst2.S1
+S1 => MUX41:inst3.S1
+GND => MUX41:inst.D3
+GND => MUX41:inst.INH
+GND => MUX41:inst1.D3
+GND => MUX41:inst1.INH
+GND => MUX41:inst2.D3
+GND => MUX41:inst2.INH
+GND => MUX41:inst3.D3
+GND => MUX41:inst3.INH
+A[0] => MUX41:inst.D0
+A[1] => MUX41:inst1.D0
+A[2] => MUX41:inst2.D0
+A[3] => MUX41:inst3.D0
+B[0] => MUX41:inst.D1
+B[1] => MUX41:inst1.D1
+B[2] => MUX41:inst2.D1
+B[3] => MUX41:inst3.D1
+
+
+|ASSIGNMENT|SELECTOR:inst|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst|MUX41:inst1
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst|MUX41:inst2
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst|MUX41:inst3
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst2
+OUT[0] <= MUX41:inst.Q
+OUT[1] <= MUX41:inst1.Q
+OUT[2] <= MUX41:inst2.Q
+OUT[3] <= MUX41:inst3.Q
+S0 => MUX41:inst.S0
+S0 => MUX41:inst1.S0
+S0 => MUX41:inst2.S0
+S0 => MUX41:inst3.S0
+C[0] => MUX41:inst.D2
+C[1] => MUX41:inst1.D2
+C[2] => MUX41:inst2.D2
+C[3] => MUX41:inst3.D2
+S1 => MUX41:inst.S1
+S1 => MUX41:inst1.S1
+S1 => MUX41:inst2.S1
+S1 => MUX41:inst3.S1
+GND => MUX41:inst.D3
+GND => MUX41:inst.INH
+GND => MUX41:inst1.D3
+GND => MUX41:inst1.INH
+GND => MUX41:inst2.D3
+GND => MUX41:inst2.INH
+GND => MUX41:inst3.D3
+GND => MUX41:inst3.INH
+A[0] => MUX41:inst.D0
+A[1] => MUX41:inst1.D0
+A[2] => MUX41:inst2.D0
+A[3] => MUX41:inst3.D0
+B[0] => MUX41:inst.D1
+B[1] => MUX41:inst1.D1
+B[2] => MUX41:inst2.D1
+B[3] => MUX41:inst3.D1
+
+
+|ASSIGNMENT|SELECTOR:inst2|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst2|MUX41:inst1
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst2|MUX41:inst2
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst2|MUX41:inst3
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|LPM_SHIFTREG:A
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|LPM_SHIFTREG:B
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|LPM_SHIFTREG:C
+data[0] => _.IN1
+data[1] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN1
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+shiftin => _.IN1
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+load => _.IN0
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+sclr => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+sset => _.IN0
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ASSIGNMENT|SELECTOR:inst1
+OUT[0] <= MUX41:inst.Q
+OUT[1] <= MUX41:inst1.Q
+OUT[2] <= MUX41:inst2.Q
+OUT[3] <= MUX41:inst3.Q
+S0 => MUX41:inst.S0
+S0 => MUX41:inst1.S0
+S0 => MUX41:inst2.S0
+S0 => MUX41:inst3.S0
+C[0] => MUX41:inst.D2
+C[1] => MUX41:inst1.D2
+C[2] => MUX41:inst2.D2
+C[3] => MUX41:inst3.D2
+S1 => MUX41:inst.S1
+S1 => MUX41:inst1.S1
+S1 => MUX41:inst2.S1
+S1 => MUX41:inst3.S1
+GND => MUX41:inst.D3
+GND => MUX41:inst.INH
+GND => MUX41:inst1.D3
+GND => MUX41:inst1.INH
+GND => MUX41:inst2.D3
+GND => MUX41:inst2.INH
+GND => MUX41:inst3.D3
+GND => MUX41:inst3.INH
+A[0] => MUX41:inst.D0
+A[1] => MUX41:inst1.D0
+A[2] => MUX41:inst2.D0
+A[3] => MUX41:inst3.D0
+B[0] => MUX41:inst.D1
+B[1] => MUX41:inst1.D1
+B[2] => MUX41:inst2.D1
+B[3] => MUX41:inst3.D1
+
+
+|ASSIGNMENT|SELECTOR:inst1|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst1|MUX41:inst1
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst1|MUX41:inst2
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|ASSIGNMENT|SELECTOR:inst1|MUX41:inst3
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+

@@ -1,0 +1,391 @@
+Analysis & Synthesis report for ASSIGNMENT
+Thu Oct 03 21:15:23 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: LPM_SHIFTREG:A
+ 12. Parameter Settings for User Entity Instance: LPM_SHIFTREG:B
+ 13. Parameter Settings for User Entity Instance: LPM_SHIFTREG:C
+ 14. lpm_shiftreg Parameter Settings by Entity Instance
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Oct 03 21:15:23 2019       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; ASSIGNMENT                                  ;
+; Top-level Entity Name       ; ASSIGNMENT                                  ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 24                                          ;
+; Total pins                  ; 15                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; ASSIGNMENT         ; ASSIGNMENT         ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
+; ASSIGNMENT.bdf                   ; yes             ; User Block Diagram/Schematic File        ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/ASSIGNMENT.bdf                   ;         ;
+; SELECTOR.bdf                     ; yes             ; User Block Diagram/Schematic File        ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/SELECTOR.bdf                     ;         ;
+; alu4bit.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/alu4bit.bdf                      ;         ;
+; alu1bit.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/alu1bit.bdf                      ;         ;
+; mux41.bdf                        ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/mux41.bdf      ;         ;
+; fulladder1bit.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/fulladder1bit.bdf                ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffeea.inc       ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc   ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 24    ;
+;     -- Combinational with no register       ; 24    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 18    ;
+;     -- 3 input functions                    ; 5     ;
+;     -- 2 input functions                    ; 1     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 24    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 15    ;
+; Maximum fan-out node                        ; GND   ;
+; Maximum fan-out                             ; 11    ;
+; Total fan-out                               ; 93    ;
+; Average fan-out                             ; 2.38  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                          ; Entity Name   ; Library Name ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+---------------+--------------+
+; |ASSIGNMENT                     ; 24 (0)      ; 0            ; 0          ; 15   ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT                                                  ; ASSIGNMENT    ; work         ;
+;    |ALU4bit:ALU4B|              ; 17 (0)      ; 0            ; 0          ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B                                    ; ALU4bit       ; work         ;
+;       |ALU1bit:inst1|           ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1                      ; ALU1bit       ; work         ;
+;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1|FullAdder1bit:inst10 ; FullAdder1bit ; work         ;
+;          |mux41:inst|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1|mux41:inst           ; mux41         ; work         ;
+;       |ALU1bit:inst2|           ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2                      ; ALU1bit       ; work         ;
+;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|FullAdder1bit:inst10 ; FullAdder1bit ; work         ;
+;          |mux41:inst|           ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|mux41:inst           ; mux41         ; work         ;
+;       |ALU1bit:inst3|           ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3                      ; ALU1bit       ; work         ;
+;          |mux41:inst|           ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|mux41:inst           ; mux41         ; work         ;
+;       |ALU1bit:inst|            ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst                       ; ALU1bit       ; work         ;
+;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|FullAdder1bit:inst10  ; FullAdder1bit ; work         ;
+;          |mux41:inst|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|mux41:inst            ; mux41         ; work         ;
+;    |SELECTOR:inst1|             ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1                                   ; SELECTOR      ; work         ;
+;       |mux41:inst3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1|mux41:inst3                       ; mux41         ; work         ;
+;    |SELECTOR:inst|              ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst                                    ; SELECTOR      ; work         ;
+;       |mux41:inst1|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst1                        ; mux41         ; work         ;
+;       |mux41:inst2|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst2                        ; mux41         ; work         ;
+;       |mux41:inst3|             ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst3                        ; mux41         ; work         ;
+;       |mux41:inst|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst                         ; mux41         ; work         ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; lpm_shiftreg:C|dffs[0..3]              ; Stuck at VCC due to stuck port data_in ;
+; lpm_shiftreg:B|dffs[0..3]              ; Stuck at VCC due to stuck port data_in ;
+; lpm_shiftreg:A|dffs[0..3]              ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 12 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++------------------------+---------------------------+------------------------------------------------------------------------+
+; Register name          ; Reason for Removal        ; Registers Removed due to This Register                                 ;
++------------------------+---------------------------+------------------------------------------------------------------------+
+; lpm_shiftreg:C|dffs[3] ; Stuck at VCC              ; lpm_shiftreg:C|dffs[2], lpm_shiftreg:C|dffs[1], lpm_shiftreg:C|dffs[0] ;
+;                        ; due to stuck port data_in ;                                                                        ;
+; lpm_shiftreg:B|dffs[3] ; Stuck at VCC              ; lpm_shiftreg:B|dffs[2], lpm_shiftreg:B|dffs[1], lpm_shiftreg:B|dffs[0] ;
+;                        ; due to stuck port data_in ;                                                                        ;
+; lpm_shiftreg:A|dffs[3] ; Stuck at VCC              ; lpm_shiftreg:A|dffs[2], lpm_shiftreg:A|dffs[1], lpm_shiftreg:A|dffs[0] ;
+;                        ; due to stuck port data_in ;                                                                        ;
++------------------------+---------------------------+------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_SHIFTREG:A ;
++------------------------+--------+---------------------------+
+; Parameter Name         ; Value  ; Type                      ;
++------------------------+--------+---------------------------+
+; LPM_WIDTH              ; 4      ; Untyped                   ;
+; LPM_DIRECTION          ; RIGHT  ; Untyped                   ;
+; LPM_AVALUE             ; UNUSED ; Untyped                   ;
+; LPM_SVALUE             ; UNUSED ; Untyped                   ;
+; DEVICE_FAMILY          ; MAX V  ; Untyped                   ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE            ;
++------------------------+--------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_SHIFTREG:B ;
++------------------------+--------+---------------------------+
+; Parameter Name         ; Value  ; Type                      ;
++------------------------+--------+---------------------------+
+; LPM_WIDTH              ; 4      ; Untyped                   ;
+; LPM_DIRECTION          ; RIGHT  ; Untyped                   ;
+; LPM_AVALUE             ; UNUSED ; Untyped                   ;
+; LPM_SVALUE             ; UNUSED ; Untyped                   ;
+; DEVICE_FAMILY          ; MAX V  ; Untyped                   ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE            ;
++------------------------+--------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_SHIFTREG:C ;
++------------------------+--------+---------------------------+
+; Parameter Name         ; Value  ; Type                      ;
++------------------------+--------+---------------------------+
+; LPM_WIDTH              ; 4      ; Untyped                   ;
+; LPM_DIRECTION          ; RIGHT  ; Untyped                   ;
+; LPM_AVALUE             ; UNUSED ; Untyped                   ;
+; LPM_SVALUE             ; UNUSED ; Untyped                   ;
+; DEVICE_FAMILY          ; MAX V  ; Untyped                   ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE            ;
++------------------------+--------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; lpm_shiftreg Parameter Settings by Entity Instance ;
++----------------------------+-----------------------+
+; Name                       ; Value                 ;
++----------------------------+-----------------------+
+; Number of entity instances ; 3                     ;
+; Entity Instance            ; LPM_SHIFTREG:A        ;
+;     -- LPM_WIDTH           ; 4                     ;
+;     -- LPM_DIRECTION       ; RIGHT                 ;
+; Entity Instance            ; LPM_SHIFTREG:B        ;
+;     -- LPM_WIDTH           ; 4                     ;
+;     -- LPM_DIRECTION       ; RIGHT                 ;
+; Entity Instance            ; LPM_SHIFTREG:C        ;
+;     -- LPM_WIDTH           ; 4                     ;
+;     -- LPM_DIRECTION       ; RIGHT                 ;
++----------------------------+-----------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Oct 03 21:15:10 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASSIGNMENT -c ASSIGNMENT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file command.bdf
+    Info (12023): Found entity 1: COMMAND
+Info (12021): Found 1 design units, including 1 entities, in source file selectreg.bdf
+    Info (12023): Found entity 1: SelectREG
+Info (12021): Found 1 design units, including 1 entities, in source file assignment.bdf
+    Info (12023): Found entity 1: ASSIGNMENT
+Info (12021): Found 1 design units, including 1 entities, in source file selector.bdf
+    Info (12023): Found entity 1: SELECTOR
+Info (12127): Elaborating entity "ASSIGNMENT" for the top level hierarchy
+Warning (275002): No superset bus at connection
+Warning (12125): Using design file alu4bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU4bit
+Info (12128): Elaborating entity "ALU4bit" for hierarchy "ALU4bit:ALU4B"
+Warning (12125): Using design file alu1bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU1bit
+Info (12128): Elaborating entity "ALU1bit" for hierarchy "ALU4bit:ALU4B|ALU1bit:inst2"
+Info (12128): Elaborating entity "MUX41" for hierarchy "ALU4bit:ALU4B|ALU1bit:inst2|MUX41:inst"
+Info (12130): Elaborated megafunction instantiation "ALU4bit:ALU4B|ALU1bit:inst2|MUX41:inst"
+Warning (12125): Using design file fulladder1bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FullAdder1bit
+Info (12128): Elaborating entity "FullAdder1bit" for hierarchy "ALU4bit:ALU4B|ALU1bit:inst2|FullAdder1bit:inst10"
+Info (12128): Elaborating entity "SELECTOR" for hierarchy "SELECTOR:inst"
+Info (12128): Elaborating entity "LPM_SHIFTREG" for hierarchy "LPM_SHIFTREG:A"
+Info (12130): Elaborated megafunction instantiation "LPM_SHIFTREG:A"
+Info (12133): Instantiated megafunction "LPM_SHIFTREG:A" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "RIGHT"
+    Info (12134): Parameter "LPM_WIDTH" = "4"
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK"
+    Warning (15610): No output dependent on input pin "INPUT2[0]"
+Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4728 megabytes
+    Info: Processing ended: Thu Oct 03 21:15:23 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
+
+
