@@ -84,22 +84,6 @@ refer to the applicable agreement for further details.
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
-	(input)
-	(rect -200 360 -32 376)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "GND" (rect 5 0 30 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "GND" (rect 128 7 149 17)(font "Arial" (font_size 6)))
-)
-(pin
 	(output)
 	(rect 1176 -24 1352 -8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -917,6 +901,23 @@ refer to the applicable agreement for further details.
 	)
 	(rotate90)
 )
+(symbol
+	(rect -152 392 -120 424)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst8" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(pt 960 696)
 	(pt 960 616)
@@ -956,10 +957,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 32 272)
 	(pt 32 368)
-)
-(connector
-	(pt 32 368)
-	(pt -32 368)
 )
 (connector
 	(pt 56 312)
@@ -1604,6 +1601,14 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 920 800)
 	(pt 920 648)
+)
+(connector
+	(pt -136 392)
+	(pt -136 368)
+)
+(connector
+	(pt -136 368)
+	(pt 32 368)
 )
 (junction (pt 624 696))
 (junction (pt 248 696))
