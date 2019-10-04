@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Fri Oct 04 16:51:48 2019
+Analysis & Synthesis Status : Successful - Fri Oct 04 18:45:42 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ASSIGNMENT
 Top-level Entity Name : ASSIGNMENT
 Family : MAX V
-Total logic elements : 53
-Total pins : 27
+Total logic elements : 45
+Total pins : 26
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

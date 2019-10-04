@@ -7,48 +7,92 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim
+Z0 dC:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim
 vASSIGNMENT
-Z0 !s110 1570200786
+Z1 !s110 1570208147
 !i10b 1
-!s100 aRbW`E1fWC@8QYjMAiI7@1
-I3Oe;@oScbmXRPKg3P6Ii73
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dX:/CMP/22/2nd/1st_term/MicroProc/Assig/simulation/qsim
-w1570200785
-8ASSIGNMENT.vo
-FASSIGNMENT.vo
-L0 31
-Z3 OV;L;10.5b;63
+!s100 >PElZFBT1d2H?N8H4_>Jm1
+I?DfZC[5gZDJn1<OPHK5Qh2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1570208147
+Z3 8ASSIGNMENT.vo
+Z4 FASSIGNMENT.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1570200786.000000
-!s107 ASSIGNMENT.vo|
-!s90 -work|work|ASSIGNMENT.vo|
+Z7 !s108 1570208147.000000
+Z8 !s107 ASSIGNMENT.vo|
+Z9 !s90 -work|work|ASSIGNMENT.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z10 o-work work
+Z11 tCvgOpt 0
 n@a@s@s@i@g@n@m@e@n@t
 vASSIGNMENT_vlg_vec_tst
-R0
-!i10b 1
-!s100 Y39EX9JUhjJ1IM^XI]9HA2
-I:MEhhLbciG7zbB7CEY<io3
 R1
+!i10b 1
+!s100 _F@EMzn^@jd14]mkLj2483
+IAloWenlEBEU^0h4hUOgSU0
 R2
-w1570200784
-8Waveform2.vwf.vt
-FWaveform2.vwf.vt
-L0 29
-R3
+R0
+w1570208146
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z12 L0 29
+R6
 r1
 !s85 0
 31
-R4
-!s107 Waveform2.vwf.vt|
-!s90 -work|work|Waveform2.vwf.vt|
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
 !i113 1
+R10
+R11
+n@a@s@s@i@g@n@m@e@n@t_vlg_vec_tst
+vDMUX
+Z13 !s110 1570206499
+!i10b 1
+!s100 =mlUW1[SgNWm<FXI`O[1i2
+ImAjUFjdHNZ?Ak;<<K=k6f1
+R2
+R0
+w1570206499
+R3
+R4
 R5
 R6
-n@a@s@s@i@g@n@m@e@n@t_vlg_vec_tst
+r1
+!s85 0
+31
+Z14 !s108 1570206499.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@d@m@u@x
+vDMUX_vlg_vec_tst
+R13
+!i10b 1
+!s100 6o88]8[<;ai`@iJJ<>JFb2
+ISj5Lj^^m0QZdX8cF0cNzJ3
+R2
+R0
+w1570206498
+8Waveform5.vwf.vt
+FWaveform5.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 Waveform5.vwf.vt|
+!s90 -work|work|Waveform5.vwf.vt|
+!i113 1
+R10
+R11
+n@d@m@u@x_vlg_vec_tst

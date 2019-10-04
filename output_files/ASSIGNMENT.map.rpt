@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ASSIGNMENT
-Fri Oct 04 16:51:48 2019
+Fri Oct 04 18:45:42 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Oct 04 16:51:48 2019       ;
+; Analysis & Synthesis Status ; Successful - Fri Oct 04 18:45:42 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; ASSIGNMENT                                  ;
 ; Top-level Entity Name       ; ASSIGNMENT                                  ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 53                                          ;
-; Total pins                  ; 27                                          ;
+; Total logic elements        ; 45                                          ;
+; Total pins                  ; 26                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -147,17 +147,17 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                            ; Library ;
 +----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
-; ASSIGNMENT.bdf                   ; yes             ; User Block Diagram/Schematic File        ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/ASSIGNMENT.bdf                   ;         ;
-; SELECTOR.bdf                     ; yes             ; User Block Diagram/Schematic File        ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/SELECTOR.bdf                     ;         ;
+; ASSIGNMENT.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Users/COMPUTER/Desktop/MicroProcAssig/ASSIGNMENT.bdf                 ;         ;
+; SELECTOR.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/Users/COMPUTER/Desktop/MicroProcAssig/SELECTOR.bdf                   ;         ;
+; DMUX.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/Users/COMPUTER/Desktop/MicroProcAssig/DMUX.bdf                       ;         ;
 ; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc ;         ;
 ; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffeea.inc       ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc   ;         ;
-; 74139m.bdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/74139m.bdf     ;         ;
-; alu4bit.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/alu4bit.bdf                      ;         ;
-; alu1bit.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/alu1bit.bdf                      ;         ;
+; alu4bit.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/COMPUTER/Desktop/MicroProcAssig/alu4bit.bdf                    ;         ;
+; alu1bit.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/COMPUTER/Desktop/MicroProcAssig/alu1bit.bdf                    ;         ;
 ; mux41.bdf                        ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/mux41.bdf      ;         ;
-; fulladder1bit.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; X:/CMP/22/2nd/1st_term/MicroProc/Assig/fulladder1bit.bdf                ;         ;
+; fulladder1bit.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/COMPUTER/Desktop/MicroProcAssig/fulladder1bit.bdf              ;         ;
 +----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -166,32 +166,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 53    ;
-;     -- Combinational with no register       ; 41    ;
-;     -- Register only                        ; 0     ;
+; Total logic elements                        ; 45    ;
+;     -- Combinational with no register       ; 31    ;
+;     -- Register only                        ; 2     ;
 ;     -- Combinational with a register        ; 12    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 33    ;
-;     -- 3 input functions                    ; 15    ;
-;     -- 2 input functions                    ; 5     ;
+;     -- 4 input functions                    ; 32    ;
+;     -- 3 input functions                    ; 10    ;
+;     -- 2 input functions                    ; 1     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 53    ;
+;     -- normal mode                          ; 45    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 12    ;
-; I/O pins                                    ; 27    ;
-; Maximum fan-out node                        ; GND   ;
+; Total registers                             ; 14    ;
+; I/O pins                                    ; 26    ;
+; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 14    ;
-; Total fan-out                               ; 215   ;
-; Average fan-out                             ; 2.69  ;
+; Total fan-out                               ; 192   ;
+; Average fan-out                             ; 2.70  ;
 +---------------------------------------------+-------+
 
 
@@ -200,30 +200,28 @@ refer to the applicable agreement for further details.
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                          ; Entity Name   ; Library Name ;
 +---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+---------------+--------------+
-; |ASSIGNMENT                     ; 53 (2)      ; 12           ; 0          ; 27   ; 0            ; 41 (2)       ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT                                                  ; ASSIGNMENT    ; work         ;
-;    |ALU4bit:ALU4B|              ; 15 (0)      ; 0            ; 0          ; 0    ; 0            ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B                                    ; ALU4bit       ; work         ;
+; |ASSIGNMENT                     ; 45 (2)      ; 14           ; 0          ; 26   ; 0            ; 31 (0)       ; 2 (2)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT                                                  ; ASSIGNMENT    ; work         ;
+;    |ALU4bit:ALU4B|              ; 16 (0)      ; 0            ; 0          ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B                                    ; ALU4bit       ; work         ;
 ;       |ALU1bit:inst1|           ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1                      ; ALU1bit       ; work         ;
 ;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1|FullAdder1bit:inst10 ; FullAdder1bit ; work         ;
 ;          |mux41:inst|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst1|mux41:inst           ; mux41         ; work         ;
-;       |ALU1bit:inst2|           ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2                      ; ALU1bit       ; work         ;
-;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|FullAdder1bit:inst10 ; FullAdder1bit ; work         ;
-;          |mux41:inst|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|mux41:inst           ; mux41         ; work         ;
-;       |ALU1bit:inst3|           ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3                      ; ALU1bit       ; work         ;
-;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|FullAdder1bit:inst10 ; FullAdder1bit ; work         ;
-;          |mux41:inst|           ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|mux41:inst           ; mux41         ; work         ;
-;       |ALU1bit:inst|            ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst                       ; ALU1bit       ; work         ;
-;          |FullAdder1bit:inst10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|FullAdder1bit:inst10  ; FullAdder1bit ; work         ;
+;       |ALU1bit:inst2|           ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2                      ; ALU1bit       ; work         ;
+;          |mux41:inst|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst2|mux41:inst           ; mux41         ; work         ;
+;       |ALU1bit:inst3|           ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3                      ; ALU1bit       ; work         ;
+;          |FullAdder1bit:inst10| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|FullAdder1bit:inst10 ; FullAdder1bit ; work         ;
+;          |mux41:inst|           ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst3|mux41:inst           ; mux41         ; work         ;
+;       |ALU1bit:inst|            ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst                       ; ALU1bit       ; work         ;
+;          |FullAdder1bit:inst10| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|FullAdder1bit:inst10  ; FullAdder1bit ; work         ;
 ;          |mux41:inst|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|ALU4bit:ALU4B|ALU1bit:inst|mux41:inst            ; mux41         ; work         ;
-;    |SELECTOR:inst1|             ; 9 (0)       ; 0            ; 0          ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1                                   ; SELECTOR      ; work         ;
+;    |SELECTOR:inst1|             ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1                                   ; SELECTOR      ; work         ;
 ;       |mux41:inst1|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1|mux41:inst1                       ; mux41         ; work         ;
 ;       |mux41:inst2|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1|mux41:inst2                       ; mux41         ; work         ;
-;       |mux41:inst3|             ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1|mux41:inst3                       ; mux41         ; work         ;
 ;       |mux41:inst|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst1|mux41:inst                        ; mux41         ; work         ;
-;    |SELECTOR:inst|              ; 15 (0)      ; 0            ; 0          ; 0    ; 0            ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst                                    ; SELECTOR      ; work         ;
-;       |mux41:inst1|             ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst1                        ; mux41         ; work         ;
+;    |SELECTOR:inst|              ; 9 (0)       ; 0            ; 0          ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst                                    ; SELECTOR      ; work         ;
+;       |mux41:inst1|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst1                        ; mux41         ; work         ;
 ;       |mux41:inst2|             ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst2                        ; mux41         ; work         ;
-;       |mux41:inst3|             ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst3                        ; mux41         ; work         ;
-;       |mux41:inst|              ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst                         ; mux41         ; work         ;
+;       |mux41:inst3|             ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst3                        ; mux41         ; work         ;
+;       |mux41:inst|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|SELECTOR:inst|mux41:inst                         ; mux41         ; work         ;
 ;    |lpm_shiftreg:A|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|lpm_shiftreg:A                                   ; lpm_shiftreg  ; work         ;
 ;    |lpm_shiftreg:B|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|lpm_shiftreg:B                                   ; lpm_shiftreg  ; work         ;
 ;    |lpm_shiftreg:C|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ASSIGNMENT|lpm_shiftreg:C                                   ; lpm_shiftreg  ; work         ;
@@ -236,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
+; Total registers                              ; 14    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -324,7 +322,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 04 16:51:37 2019
+    Info: Processing started: Fri Oct 04 18:45:30 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASSIGNMENT -c ASSIGNMENT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -336,14 +334,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file assignm
     Info (12023): Found entity 1: ASSIGNMENT
 Info (12021): Found 1 design units, including 1 entities, in source file selector.bdf
     Info (12023): Found entity 1: SELECTOR
+Info (12021): Found 1 design units, including 1 entities, in source file dmux.bdf
+    Info (12023): Found entity 1: DMUX
 Info (12127): Elaborating entity "ASSIGNMENT" for the top level hierarchy
+Warning (275002): No superset bus at connection
 Info (12128): Elaborating entity "LPM_SHIFTREG" for hierarchy "LPM_SHIFTREG:A"
 Info (12130): Elaborated megafunction instantiation "LPM_SHIFTREG:A"
 Info (12133): Instantiated megafunction "LPM_SHIFTREG:A" with the following parameter:
     Info (12134): Parameter "LPM_DIRECTION" = "RIGHT"
     Info (12134): Parameter "LPM_WIDTH" = "4"
-Info (12128): Elaborating entity "74139M" for hierarchy "74139M:inst4"
-Info (12130): Elaborated megafunction instantiation "74139M:inst4"
+Info (12128): Elaborating entity "DMUX" for hierarchy "DMUX:inst10"
 Warning (12125): Using design file alu4bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ALU4bit
 Info (12128): Elaborating entity "ALU4bit" for hierarchy "ALU4bit:ALU4B"
@@ -356,14 +356,14 @@ Warning (12125): Using design file fulladder1bit.bdf, which is not specified as 
     Info (12023): Found entity 1: FullAdder1bit
 Info (12128): Elaborating entity "FullAdder1bit" for hierarchy "ALU4bit:ALU4B|ALU1bit:inst2|FullAdder1bit:inst10"
 Info (12128): Elaborating entity "SELECTOR" for hierarchy "SELECTOR:inst"
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 53 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info (21061): Implemented 45 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4726 megabytes
-    Info: Processing ended: Fri Oct 04 16:51:48 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Fri Oct 04 18:45:42 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:31
 
 
