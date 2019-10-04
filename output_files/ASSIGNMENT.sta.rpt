@@ -1,5 +1,5 @@
 Timing Analyzer report for ASSIGNMENT
-Fri Oct 04 13:23:11 2019
+Fri Oct 04 16:51:56 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 ; Timing Analyzer       ; Legacy Timing Analyzer                              ;
 ; Revision Name         ; ASSIGNMENT                                          ;
 ; Device Family         ; MAX V                                               ;
-; Device Name           ; 5M40ZE64C4                                          ;
+; Device Name           ; 5M80ZM68C4                                          ;
 ; Timing Models         ; Final                                               ;
 ; Delay Model           ; Slow Model                                          ;
 ; Rise/Fall Delays      ; Unavailable                                         ;
@@ -90,23 +90,23 @@ refer to the applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-------------------------------------------------+
-; Fmax Summary                                    ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 102.8 MHz ; 102.8 MHz       ; CLK        ;      ;
-+-----------+-----------------+------------+------+
++------------------------------------------------+
+; Fmax Summary                                   ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 90.2 MHz ; 90.2 MHz        ; CLK        ;      ;
++----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+--------------------------------+
-; Setup Summary                  ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; CLK   ; -8.728 ; -30.969       ;
-+-------+--------+---------------+
++---------------------------------+
+; Setup Summary                   ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; CLK   ; -10.087 ; -112.622      ;
++-------+---------+---------------+
 
 
 +-------------------------------+
@@ -114,7 +114,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+---------------+
 ; Clock ; Slack ; End Point TNS ;
 +-------+-------+---------------+
-; CLK   ; 3.291 ; 0.000         ;
+; CLK   ; 4.061 ; 0.000         ;
 +-------+-------+---------------+
 
 
@@ -139,46 +139,218 @@ No paths to report.
 +-------+--------+---------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLK'                                                                                                                    ;
++---------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; -10.087 ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.827     ;
+; -10.087 ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.827     ;
+; -9.762  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.502     ;
+; -9.761  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.501     ;
+; -9.698  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.438     ;
+; -9.698  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.438     ;
+; -9.677  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.417     ;
+; -9.677  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.417     ;
+; -9.673  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.413     ;
+; -9.673  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.413     ;
+; -9.512  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.252     ;
+; -9.511  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.251     ;
+; -9.427  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.167     ;
+; -9.427  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.167     ;
+; -9.424  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.164     ;
+; -9.353  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.093     ;
+; -9.352  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.092     ;
+; -9.278  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.018     ;
+; -9.278  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.018     ;
+; -9.268  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.008     ;
+; -9.268  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 10.008     ;
+; -9.209  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.949      ;
+; -9.208  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.948      ;
+; -9.130  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.870      ;
+; -9.127  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.867      ;
+; -9.124  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.864      ;
+; -9.124  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.864      ;
+; -9.122  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.862      ;
+; -9.121  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.861      ;
+; -9.120  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.860      ;
+; -9.083  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.823      ;
+; -9.036  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.776      ;
+; -9.036  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.776      ;
+; -9.035  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.775      ;
+; -9.015  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.755      ;
+; -9.015  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.755      ;
+; -9.014  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.754      ;
+; -9.010  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.750      ;
+; -9.009  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.749      ;
+; -8.893  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.633      ;
+; -8.893  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.633      ;
+; -8.833  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.573      ;
+; -8.764  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.504      ;
+; -8.721  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.461      ;
+; -8.718  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.458      ;
+; -8.713  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.453      ;
+; -8.674  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.414      ;
+; -8.615  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.355      ;
+; -8.606  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.346      ;
+; -8.606  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.346      ;
+; -8.605  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.345      ;
+; -8.600  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.340      ;
+; -8.577  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.317      ;
+; -8.574  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.314      ;
+; -8.569  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.309      ;
+; -8.530  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.270      ;
+; -8.462  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.202      ;
+; -8.462  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.202      ;
+; -8.461  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.201      ;
+; -8.456  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.196      ;
+; -8.442  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.182      ;
+; -8.373  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.113      ;
+; -8.308  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.048      ;
+; -8.307  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.047      ;
+; -8.230  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.970      ;
+; -8.223  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.963      ;
+; -8.223  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.963      ;
+; -8.091  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.831      ;
+; -8.091  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.831      ;
+; -7.950  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.690      ;
+; -7.947  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.687      ;
+; -7.942  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.682      ;
+; -7.629  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.369      ;
+; -7.560  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.300      ;
+; -7.558  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.298      ;
+; -7.555  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.295      ;
+; -7.550  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.290      ;
+; -7.428  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.168      ;
+; -7.395  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.135      ;
+; -7.392  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.132      ;
+; -7.387  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.127      ;
+; -6.341  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.340  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 7.080      ;
+; -5.952  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.692      ;
+; -5.951  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.691      ;
+; -5.662  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.402      ;
+; -5.376  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.116      ;
+; -5.273  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.013      ;
+; -5.147  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.887      ;
+; -5.146  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.886      ;
+; -4.722  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.462      ;
+; -4.468  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.208      ;
+; -4.318  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.058      ;
+; -3.765  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.505      ;
+; -3.706  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.446      ;
+; -3.583  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.323      ;
+; -3.571  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.311      ;
+; -3.510  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.250      ;
+; -3.395  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.135      ;
++---------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'CLK'                                                                                                                   ;
+; Hold: 'CLK'                                                                                                                    ;
 +--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
-; -8.728 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 9.468      ;
-; -8.136 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.876      ;
-; -7.662 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 8.402      ;
-; -7.201 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 7.941      ;
-; -6.904 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 7.644      ;
-; -6.880 ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 7.620      ;
-; -6.430 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 7.170      ;
-; -6.200 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.940      ;
-; -6.000 ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 6.740      ;
-; -5.004 ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.744      ;
-; -3.558 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.298      ;
-; -2.654 ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.394      ;
-; -2.625 ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.365      ;
+; 4.061  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.135      ;
+; 4.176  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.250      ;
+; 4.237  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.311      ;
+; 4.249  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.323      ;
+; 4.372  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.446      ;
+; 4.431  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.505      ;
+; 4.561  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.635      ;
+; 4.984  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.058      ;
+; 5.129  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.203      ;
+; 5.224  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.298      ;
+; 5.224  ; lpm_shiftreg:B|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.298      ;
+; 5.388  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.462      ;
+; 5.807  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.881      ;
+; 5.808  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.882      ;
+; 5.930  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.004      ;
+; 6.042  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.116      ;
+; 6.320  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.394      ;
+; 6.608  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.682      ;
+; 6.609  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.683      ;
+; 6.998  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.072      ;
+; 6.999  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.073      ;
+; 7.252  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.326      ;
+; 7.257  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.331      ;
+; 7.260  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.334      ;
+; 7.785  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.859      ;
+; 7.862  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.936      ;
+; 7.931  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.005      ;
+; 7.984  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.058      ;
+; 8.025  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.099      ;
+; 8.065  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.139      ;
+; 8.070  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.144      ;
+; 8.073  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.147      ;
+; 8.094  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.168      ;
+; 8.127  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.201      ;
+; 8.133  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.207      ;
+; 8.133  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.207      ;
+; 8.277  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.351      ;
+; 8.283  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.357      ;
+; 8.283  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.357      ;
+; 8.417  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.491      ;
+; 8.448  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.522      ;
+; 8.448  ; lpm_shiftreg:A|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.522      ;
+; 8.456  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.530      ;
+; 8.461  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.535      ;
+; 8.464  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.538      ;
+; 8.486  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.560      ;
+; 8.523  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.597      ;
+; 8.525  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.599      ;
+; 8.525  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.599      ;
+; 8.609  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.683      ;
+; 8.610  ; lpm_shiftreg:B|dffs[1] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.684      ;
+; 8.647  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.721      ;
+; 8.647  ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.721      ;
+; 8.678  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.752      ;
+; 8.684  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.758      ;
+; 8.684  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.758      ;
+; 8.688  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.762      ;
+; 8.688  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.762      ;
+; 8.718  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.792      ;
+; 8.772  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.846      ;
+; 8.773  ; lpm_shiftreg:A|dffs[1] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.847      ;
+; 8.787  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.861      ;
+; 8.826  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.900      ;
+; 8.831  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.905      ;
+; 8.834  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.908      ;
+; 8.868  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.942      ;
+; 8.937  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.011      ;
+; 8.976  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.050      ;
+; 8.981  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.055      ;
+; 8.984  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.058      ;
+; 9.080  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.154      ;
+; 9.080  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.154      ;
+; 9.164  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.238      ;
+; 9.165  ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.239      ;
+; 9.186  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.260      ;
+; 9.186  ; lpm_shiftreg:B|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.260      ;
+; 9.269  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.343      ;
+; 9.324  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.398      ;
+; 9.338  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.412      ;
+; 9.377  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.451      ;
+; 9.381  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.455      ;
+; 9.381  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.455      ;
+; 9.382  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.456      ;
+; 9.385  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.459      ;
+; 9.465  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.539      ;
+; 9.466  ; lpm_shiftreg:B|dffs[0] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.540      ;
+; 9.531  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.605      ;
+; 9.531  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.605      ;
+; 9.615  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.689      ;
+; 9.616  ; lpm_shiftreg:A|dffs[0] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.690      ;
+; 9.714  ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:A|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 9.788      ;
+; 9.932  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.006     ;
+; 9.932  ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.006     ;
+; 9.987  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.061     ;
+; 9.987  ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.061     ;
+; 10.016 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.090     ;
+; 10.017 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:A|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.091     ;
+; 10.377 ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:B|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.451     ;
+; 10.377 ; lpm_shiftreg:A|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 10.451     ;
 +--------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'CLK'                                                                                                                   ;
-+-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
-; 3.291 ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.365      ;
-; 3.320 ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.394      ;
-; 3.756 ; lpm_shiftreg:C|dffs[3] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.830      ;
-; 4.224 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.298      ;
-; 4.499 ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.573      ;
-; 6.548 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.622      ;
-; 6.548 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.622      ;
-; 6.751 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 6.825      ;
-; 6.936 ; lpm_shiftreg:C|dffs[2] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.010      ;
-; 7.663 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.737      ;
-; 7.780 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 7.854      ;
-; 7.983 ; lpm_shiftreg:C|dffs[1] ; lpm_shiftreg:C|dffs[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.057      ;
-; 8.372 ; lpm_shiftreg:C|dffs[0] ; lpm_shiftreg:C|dffs[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 8.446      ;
-+-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------+
@@ -186,7 +358,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 26       ; 0        ; 0        ; 0        ;
+; CLK        ; CLK      ; 216      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -196,7 +368,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 26       ; 0        ; 0        ; 0        ;
+; CLK        ; CLK      ; 216      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -221,9 +393,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 66    ; 66   ;
+; Unconstrained Input Port Paths  ; 140   ; 140  ;
 ; Unconstrained Output Ports      ; 16    ; 16   ;
-; Unconstrained Output Port Paths ; 53    ; 53   ;
+; Unconstrained Output Port Paths ; 77    ; 77   ;
 +---------------------------------+-------+------+
 
 
@@ -246,11 +418,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; INPUT1[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; INPUT1[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; INPUT1[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; INPUT2[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; INPUT2[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; S[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; S[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; S[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; VCC        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -288,11 +460,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; INPUT1[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; INPUT1[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; INPUT1[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; INPUT2[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; INPUT2[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; S[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; S[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; S[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; VCC        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -326,7 +498,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 04 13:23:09 2019
+    Info: Processing started: Fri Oct 04 16:51:54 2019
 Info: Command: quartus_sta ASSIGNMENT -c ASSIGNMENT
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -340,14 +512,14 @@ Info (332105): Deriving Clocks
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.728
+Info (332146): Worst-case setup slack is -10.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.728             -30.969 CLK 
-Info (332146): Worst-case hold slack is 3.291
+    Info (332119):   -10.087            -112.622 CLK 
+Info (332146): Worst-case hold slack is 4.061
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.291               0.000 CLK 
+    Info (332119):     4.061               0.000 CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
@@ -358,9 +530,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4694 megabytes
-    Info: Processing ended: Fri Oct 04 13:23:11 2019
+    Info: Peak virtual memory: 4689 megabytes
+    Info: Processing ended: Fri Oct 04 16:51:56 2019
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
