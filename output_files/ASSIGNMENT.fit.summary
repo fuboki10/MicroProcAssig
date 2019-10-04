@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Oct 03 21:15:32 2019
+Fitter Status : Successful - Fri Oct 04 13:23:06 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ASSIGNMENT
 Top-level Entity Name : ASSIGNMENT
 Family : MAX V
 Device : 5M40ZE64C4
 Timing Models : Final
-Total logic elements : 24 / 40 ( 60 % )
-Total pins : 15 / 54 ( 28 % )
+Total logic elements : 34 / 40 ( 85 % )
+Total pins : 28 / 54 ( 52 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

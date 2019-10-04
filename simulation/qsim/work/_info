@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim
+vASSIGNMENT
+!s110 1570188419
+!i10b 1
+!s100 >l>i;R<ab7iG>B85aSDi81
+I;3:Z8T;Hm6iDI4IYXB_:>0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1570188418
+8ASSIGNMENT.vo
+FASSIGNMENT.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1570188419.000000
+!s107 ASSIGNMENT.vo|
+!s90 -work|work|ASSIGNMENT.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@a@s@s@i@g@n@m@e@n@t
+vASSIGNMENT_vlg_vec_tst
+!s110 1570188420
+!i10b 1
+!s100 >EhlAzT:N;o[Jj3dlza0[0
+I6_`1BRQX>d4h4W8@RSW573
+R1
+R0
+w1570188417
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1570188420.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R3
+R4
+n@a@s@s@i@g@n@m@e@n@t_vlg_vec_tst
