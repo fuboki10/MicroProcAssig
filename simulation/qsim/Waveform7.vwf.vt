@@ -1,0 +1,543 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/05/2019 09:07:01"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          ASSIGNMENT
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ASSIGNMENT_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg [3:0] INPUT1;
+reg [1:0] INPUT2;
+reg [2:0] S;
+// wires                                               
+wire [3:0] OA;
+wire [3:0] OB;
+wire [3:0] OC;
+wire [3:0] OUTPUT;
+
+// assign statements (if any)                          
+ASSIGNMENT i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.INPUT1(INPUT1),
+	.INPUT2(INPUT2),
+	.OA(OA),
+	.OB(OB),
+	.OC(OC),
+	.\OUTPUT (OUTPUT),
+	.S(S)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #5000 1'b1;
+	#5000;
+end 
+// INPUT1[ 3 ]
+initial
+begin
+	INPUT1[3] = 1'b0;
+	INPUT1[3] = #36000 1'b1;
+	INPUT1[3] = #36000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #24000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #24000 1'b0;
+	INPUT1[3] = #24000 1'b1;
+	INPUT1[3] = #12000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #24000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #48000 1'b0;
+	INPUT1[3] = #24000 1'b1;
+	INPUT1[3] = #12000 1'b0;
+	INPUT1[3] = #24000 1'b1;
+	INPUT1[3] = #36000 1'b0;
+	INPUT1[3] = #36000 1'b1;
+	INPUT1[3] = #36000 1'b0;
+	INPUT1[3] = #36000 1'b1;
+	INPUT1[3] = #24000 1'b0;
+	INPUT1[3] = #24000 1'b1;
+	INPUT1[3] = #12000 1'b0;
+	INPUT1[3] = #84000 1'b1;
+	INPUT1[3] = #12000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #24000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #36000 1'b0;
+	INPUT1[3] = #60000 1'b1;
+	INPUT1[3] = #12000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #60000 1'b0;
+	INPUT1[3] = #12000 1'b1;
+	INPUT1[3] = #96000 1'b0;
+	INPUT1[3] = #24000 1'b1;
+end 
+// INPUT1[ 2 ]
+initial
+begin
+	INPUT1[2] = 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #36000 1'b0;
+	INPUT1[2] = #36000 1'b1;
+	INPUT1[2] = #48000 1'b0;
+	INPUT1[2] = #24000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #36000 1'b0;
+	INPUT1[2] = #48000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #60000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #36000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #36000 1'b1;
+	INPUT1[2] = #12000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #36000 1'b1;
+	INPUT1[2] = #24000 1'b0;
+	INPUT1[2] = #12000 1'b1;
+	INPUT1[2] = #36000 1'b0;
+	INPUT1[2] = #24000 1'b1;
+	INPUT1[2] = #96000 1'b0;
+end 
+// INPUT1[ 1 ]
+initial
+begin
+	INPUT1[1] = 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #36000 1'b0;
+	INPUT1[1] = #60000 1'b1;
+	INPUT1[1] = #48000 1'b0;
+	INPUT1[1] = #24000 1'b1;
+	INPUT1[1] = #48000 1'b0;
+	INPUT1[1] = #84000 1'b1;
+	INPUT1[1] = #24000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #36000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #36000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #24000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #36000 1'b1;
+	INPUT1[1] = #36000 1'b0;
+	INPUT1[1] = #24000 1'b1;
+	INPUT1[1] = #24000 1'b0;
+	INPUT1[1] = #24000 1'b1;
+	INPUT1[1] = #24000 1'b0;
+	INPUT1[1] = #24000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #12000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #36000 1'b0;
+	INPUT1[1] = #36000 1'b1;
+	INPUT1[1] = #72000 1'b0;
+	INPUT1[1] = #12000 1'b1;
+	INPUT1[1] = #36000 1'b0;
+end 
+// INPUT1[ 0 ]
+initial
+begin
+	INPUT1[0] = 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #48000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #24000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #72000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #24000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #36000 1'b0;
+	INPUT1[0] = #36000 1'b1;
+	INPUT1[0] = #24000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #36000 1'b1;
+	INPUT1[0] = #24000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #72000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #60000 1'b0;
+	INPUT1[0] = #24000 1'b1;
+	INPUT1[0] = #48000 1'b0;
+	INPUT1[0] = #24000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #60000 1'b1;
+	INPUT1[0] = #24000 1'b0;
+	INPUT1[0] = #24000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+	INPUT1[0] = #12000 1'b0;
+	INPUT1[0] = #12000 1'b1;
+end 
+// INPUT2[ 1 ]
+initial
+begin
+	INPUT2[1] = 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #34000 1'b1;
+	INPUT2[1] = #34000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #85000 1'b0;
+	INPUT2[1] = #34000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #51000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #34000 1'b0;
+	INPUT2[1] = #34000 1'b1;
+	INPUT2[1] = #68000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #34000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #34000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #85000 1'b0;
+	INPUT2[1] = #34000 1'b1;
+	INPUT2[1] = #34000 1'b0;
+	INPUT2[1] = #34000 1'b1;
+	INPUT2[1] = #34000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+	INPUT2[1] = #17000 1'b0;
+	INPUT2[1] = #17000 1'b1;
+end 
+// INPUT2[ 0 ]
+initial
+begin
+	INPUT2[0] = 1'b0;
+	INPUT2[0] = #17000 1'b1;
+	INPUT2[0] = #17000 1'b0;
+	INPUT2[0] = #34000 1'b1;
+	INPUT2[0] = #17000 1'b0;
+	INPUT2[0] = #17000 1'b1;
+	INPUT2[0] = #34000 1'b0;
+	INPUT2[0] = #68000 1'b1;
+	INPUT2[0] = #51000 1'b0;
+	INPUT2[0] = #51000 1'b1;
+	INPUT2[0] = #17000 1'b0;
+	INPUT2[0] = #17000 1'b1;
+	INPUT2[0] = #34000 1'b0;
+	INPUT2[0] = #68000 1'b1;
+	INPUT2[0] = #17000 1'b0;
+	INPUT2[0] = #17000 1'b1;
+	INPUT2[0] = #85000 1'b0;
+	INPUT2[0] = #17000 1'b1;
+	INPUT2[0] = #119000 1'b0;
+	INPUT2[0] = #119000 1'b1;
+	INPUT2[0] = #85000 1'b0;
+	INPUT2[0] = #17000 1'b1;
+	INPUT2[0] = #51000 1'b0;
+	INPUT2[0] = #17000 1'b1;
+end 
+// S[ 2 ]
+initial
+begin
+	S[2] = 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #70000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #14000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #21000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #35000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #21000 1'b0;
+	S[2] = #42000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #21000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #14000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #35000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #28000 1'b0;
+	S[2] = #28000 1'b1;
+	S[2] = #21000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #21000 1'b1;
+	S[2] = #28000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #21000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #14000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #28000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #21000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #28000 1'b1;
+	S[2] = #21000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #14000 1'b0;
+	S[2] = #7000 1'b1;
+	S[2] = #7000 1'b0;
+	S[2] = #7000 1'b1;
+end 
+// S[ 1 ]
+initial
+begin
+	S[1] = 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #21000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #21000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #28000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #49000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #21000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #21000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #28000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #21000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #21000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #49000 1'b0;
+	S[1] = #14000 1'b1;
+	S[1] = #14000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #42000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+	S[1] = #7000 1'b0;
+	S[1] = #7000 1'b1;
+end 
+// S[ 0 ]
+initial
+begin
+	S[0] = 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #28000 1'b0;
+	S[0] = #14000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #21000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #14000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #21000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #35000 1'b1;
+	S[0] = #28000 1'b0;
+	S[0] = #35000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #21000 1'b0;
+	S[0] = #35000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #63000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #14000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #14000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #28000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #28000 1'b1;
+	S[0] = #14000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #21000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #14000 1'b0;
+	S[0] = #42000 1'b1;
+	S[0] = #21000 1'b0;
+	S[0] = #14000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #21000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #14000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #21000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #42000 1'b1;
+	S[0] = #21000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #7000 1'b0;
+	S[0] = #7000 1'b1;
+	S[0] = #14000 1'b0;
+	S[0] = #14000 1'b1;
+	S[0] = #7000 1'b0;
+end 
+endmodule
+

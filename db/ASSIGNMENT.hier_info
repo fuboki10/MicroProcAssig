@@ -1,81 +1,65 @@
 |ASSIGNMENT
-OA[0] <= LPM_SHIFTREG:A.q[0]
-OA[1] <= LPM_SHIFTREG:A.q[1]
-OA[2] <= LPM_SHIFTREG:A.q[2]
-OA[3] <= LPM_SHIFTREG:A.q[3]
-CLK => LPM_SHIFTREG:A.clock
-CLK => inst4.CLK
-CLK => inst5.CLK
-CLK => LPM_SHIFTREG:B.clock
-CLK => LPM_SHIFTREG:C.clock
-INPUT1[0] => inst4.DATAIN
+OA[0] <= Block1:inst5.OUT[0]
+OA[1] <= Block1:inst5.OUT[1]
+OA[2] <= Block1:inst5.OUT[2]
+OA[3] <= Block1:inst5.OUT[3]
+CLK => Block1:inst5.CLK
+CLK => Block1:inst6.CLK
+CLK => Block1:inst7.CLK
+INPUT2[0] => DMUX:inst10.A1
+INPUT2[0] => SELECTOR:inst1.S0
+INPUT2[1] => DMUX:inst10.B1
+INPUT2[1] => SELECTOR:inst1.S1
+S[0] => SELECTOR:inst.S0
+S[1] => ALU4bit:ALU4B.S0
+S[2] => ALU4bit:ALU4B.S1
 INPUT1[0] => SELECTOR:inst.A[0]
 INPUT1[0] => SELECTOR:inst2.S0
 INPUT1[1] => SELECTOR:inst.A[1]
 INPUT1[1] => SELECTOR:inst2.S1
 INPUT1[2] => SELECTOR:inst.A[2]
 INPUT1[3] => SELECTOR:inst.A[3]
-INPUT2[0] => SELECTOR:inst1.S0
-INPUT2[1] => inst5.DATAIN
-INPUT2[1] => SELECTOR:inst1.S1
-S[0] => SELECTOR:inst.S1
-S[1] => ALU4bit:ALU4B.S0
-S[2] => ALU4bit:ALU4B.S1
-OB[0] <= LPM_SHIFTREG:B.q[0]
-OB[1] <= LPM_SHIFTREG:B.q[1]
-OB[2] <= LPM_SHIFTREG:B.q[2]
-OB[3] <= LPM_SHIFTREG:B.q[3]
-OC[0] <= LPM_SHIFTREG:C.q[0]
-OC[1] <= LPM_SHIFTREG:C.q[1]
-OC[2] <= LPM_SHIFTREG:C.q[2]
-OC[3] <= LPM_SHIFTREG:C.q[3]
+OB[0] <= Block1:inst6.OUT[0]
+OB[1] <= Block1:inst6.OUT[1]
+OB[2] <= Block1:inst6.OUT[2]
+OB[3] <= Block1:inst6.OUT[3]
+OC[0] <= Block1:inst7.OUT[0]
+OC[1] <= Block1:inst7.OUT[1]
+OC[2] <= Block1:inst7.OUT[2]
+OC[3] <= Block1:inst7.OUT[3]
 OUTPUT[0] <= ALU4bit:ALU4B.Y[0]
 OUTPUT[1] <= ALU4bit:ALU4B.Y[1]
 OUTPUT[2] <= ALU4bit:ALU4B.Y[2]
 OUTPUT[3] <= ALU4bit:ALU4B.Y[3]
 
 
-|ASSIGNMENT|LPM_SHIFTREG:A
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-clock => dffs[3].CLK
-clock => dffs[2].CLK
-clock => dffs[1].CLK
-clock => dffs[0].CLK
-enable => dffs[3].ENA
-enable => dffs[2].ENA
-enable => dffs[1].ENA
-enable => dffs[0].ENA
-shiftin => _.IN1
-load => _.IN0
-load => _.IN0
-load => _.IN0
-load => _.IN0
-load => _.IN0
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-sclr => _.IN0
-sset => _.IN0
-sset => _.IN0
-sset => _.IN0
-sset => _.IN0
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+|ASSIGNMENT|Block1:inst5
+OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => inst.DATAIN
+IN[1] => inst1.DATAIN
+IN[2] => inst2.DATAIN
+IN[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+ENABLE => inst.ENA
+ENABLE => inst1.ENA
+ENABLE => inst2.ENA
+ENABLE => inst3.ENA
 
 
 |ASSIGNMENT|DMUX:inst10
-Y0 <= 33.DB_MAX_OUTPUT_PORT_TYPE
+Y0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 A1 => 8.IN0
 B1 => 11.IN0
 G1N => 7.IN0
-Y1 <= 34.DB_MAX_OUTPUT_PORT_TYPE
-Y2 <= 35.DB_MAX_OUTPUT_PORT_TYPE
-Y3 <= 36.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ASSIGNMENT|ALU4bit:ALU4B
@@ -404,70 +388,42 @@ D2 => 4.IN3
 D3 => 5.IN3
 
 
-|ASSIGNMENT|LPM_SHIFTREG:B
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-clock => dffs[3].CLK
-clock => dffs[2].CLK
-clock => dffs[1].CLK
-clock => dffs[0].CLK
-enable => dffs[3].ENA
-enable => dffs[2].ENA
-enable => dffs[1].ENA
-enable => dffs[0].ENA
-shiftin => _.IN1
-load => _.IN0
-load => _.IN0
-load => _.IN0
-load => _.IN0
-load => _.IN0
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-sclr => _.IN0
-sset => _.IN0
-sset => _.IN0
-sset => _.IN0
-sset => _.IN0
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+|ASSIGNMENT|Block1:inst6
+OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => inst.DATAIN
+IN[1] => inst1.DATAIN
+IN[2] => inst2.DATAIN
+IN[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+ENABLE => inst.ENA
+ENABLE => inst1.ENA
+ENABLE => inst2.ENA
+ENABLE => inst3.ENA
 
 
-|ASSIGNMENT|LPM_SHIFTREG:C
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-clock => dffs[3].CLK
-clock => dffs[2].CLK
-clock => dffs[1].CLK
-clock => dffs[0].CLK
-enable => dffs[3].ENA
-enable => dffs[2].ENA
-enable => dffs[1].ENA
-enable => dffs[0].ENA
-shiftin => _.IN1
-load => _.IN0
-load => _.IN0
-load => _.IN0
-load => _.IN0
-load => _.IN0
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-sclr => _.IN0
-sset => _.IN0
-sset => _.IN0
-sset => _.IN0
-sset => _.IN0
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
+|ASSIGNMENT|Block1:inst7
+OUT[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+IN[0] => inst.DATAIN
+IN[1] => inst1.DATAIN
+IN[2] => inst2.DATAIN
+IN[3] => inst3.DATAIN
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+ENABLE => inst.ENA
+ENABLE => inst1.ENA
+ENABLE => inst2.ENA
+ENABLE => inst3.ENA
 
 
 |ASSIGNMENT|SELECTOR:inst1
