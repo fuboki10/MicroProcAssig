@@ -1,5 +1,5 @@
 Flow report for ASSIGNMENT
-Mon Oct 07 10:34:54 2019
+Tue Oct 08 20:14:07 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Mon Oct 07 10:34:54 2019       ;
+; Flow Status           ; Successful - Tue Oct 08 20:14:07 2019       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; ASSIGNMENT                                  ;
 ; Top-level Entity Name ; ASSIGNMENT                                  ;
@@ -90,7 +90,27 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
-; Total                ; 00:00:43     ; --                      ; --                  ; 00:00:46                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; Total                ; 00:01:03     ; --                      ; --                  ; 00:01:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,6 +129,26 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; DESKTOP-U951PR8  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-U951PR8  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-U951PR8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Stiener          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -125,6 +165,26 @@ quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_setting
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=X:/CMP/22/2nd/1st_term/MicroProc/Assig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=X:/CMP/22/2nd/1st_term/MicroProc/Assig/Waveform8.vwf --testbench_file=X:/CMP/22/2nd/1st_term/MicroProc/Assig/simulation/qsim/Waveform8.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=X:/CMP/22/2nd/1st_term/MicroProc/Assig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
 
 
 
