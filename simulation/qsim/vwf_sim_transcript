@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Oct 08 20:14:05 2019
+    Info: Processing started: Sat Oct 12 14:58:30 2019
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ASSIGNMENT -c ASSIGNMENT --vector_source=C:/Users/COMPUTER/Desktop/MicroProcAssig/Waveform.vwf --testbench_file=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -53,13 +53,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Oct 08 20:14:06 2019
+    Info: Processing started: Sat Oct 12 14:58:36 2019
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ ASSIGNMENT -c ASSIGNMENT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ASSIGNMENT.vo in folder "C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4632 megabytes
-    Info: Processing ended: Tue Oct 08 20:14:07 2019
+    Info: Processing ended: Sat Oct 12 14:58:37 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -77,33 +77,38 @@ c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do ASSIGNMENT.do
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
+
 # 10.5b
+
 
 # do ASSIGNMENT.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
+
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:14:07 on Oct 08,2019
+# Start time: 14:58:40 on Oct 12,2019
 # vlog -work work ASSIGNMENT.vo 
+
 # -- Compiling module ASSIGNMENT
+
 # 
 # Top level modules:
 # 	ASSIGNMENT
-# End time: 20:14:07 on Oct 08,2019, Elapsed time: 0:00:00
+# End time: 14:58:41 on Oct 12,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:14:07 on Oct 08,2019
+# Start time: 14:58:41 on Oct 12,2019
 # vlog -work work Waveform.vwf.vt 
-
 # -- Compiling module ASSIGNMENT_vlg_vec_tst
+
 # 
 # Top level modules:
 # 	ASSIGNMENT_vlg_vec_tst
-# End time: 20:14:07 on Oct 08,2019, Elapsed time: 0:00:00
+# End time: 14:58:41 on Oct 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L maxv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ASSIGNMENT_vlg_vec_tst 
-# Start time: 20:14:07 on Oct 08,2019
+# Start time: 14:58:41 on Oct 12,2019
 # Loading work.ASSIGNMENT_vlg_vec_tst
 # Loading work.ASSIGNMENT
 # Loading maxv_ver.maxv_io
@@ -114,7 +119,7 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # ** Note: $finish    : Waveform.vwf.vt(56)
 #    Time: 1750 ns  Iteration: 0  Instance: /ASSIGNMENT_vlg_vec_tst
-# End time: 20:14:08 on Oct 08,2019, Elapsed time: 0:00:01
+# End time: 14:58:42 on Oct 12,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -127,7 +132,7 @@ Reading C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ASSIGNMENT.msim
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ASSIGNMENT_20191008201408.sim.vwf
+Writing the resulting VWF to C:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim/ASSIGNMENT_20191012145842.sim.vwf
 
 Finished VCD to VWF conversion.
 

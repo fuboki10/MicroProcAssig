@@ -1,25 +1,25 @@
 # do ASSIGNMENT.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:14:07 on Oct 08,2019
+# Start time: 14:58:40 on Oct 12,2019
 # vlog -work work ASSIGNMENT.vo 
 # -- Compiling module ASSIGNMENT
 # 
 # Top level modules:
 # 	ASSIGNMENT
-# End time: 20:14:07 on Oct 08,2019, Elapsed time: 0:00:00
+# End time: 14:58:41 on Oct 12,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:14:07 on Oct 08,2019
+# Start time: 14:58:41 on Oct 12,2019
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module ASSIGNMENT_vlg_vec_tst
 # 
 # Top level modules:
 # 	ASSIGNMENT_vlg_vec_tst
-# End time: 20:14:07 on Oct 08,2019, Elapsed time: 0:00:00
+# End time: 14:58:41 on Oct 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L maxv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ASSIGNMENT_vlg_vec_tst 
-# Start time: 20:14:07 on Oct 08,2019
+# Start time: 14:58:41 on Oct 12,2019
 # Loading work.ASSIGNMENT_vlg_vec_tst
 # Loading work.ASSIGNMENT
 # Loading maxv_ver.maxv_io
@@ -29,5 +29,5 @@
 # after#25
 # ** Note: $finish    : Waveform.vwf.vt(56)
 #    Time: 1750 ns  Iteration: 0  Instance: /ASSIGNMENT_vlg_vec_tst
-# End time: 20:14:08 on Oct 08,2019, Elapsed time: 0:00:01
+# End time: 14:58:42 on Oct 12,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

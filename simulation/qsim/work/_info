@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/COMPUTER/Desktop/MicroProcAssig/simulation/qsim
 vASSIGNMENT
-Z1 !s110 1570558447
+Z1 !s110 1570885121
 !i10b 1
 !s100 QdmdURj9YMl4hM3;QC`f_2
 I2b=:V:0EI^c?[D0M?78k_2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1570558447
+w1570885117
 Z3 8ASSIGNMENT.vo
 Z4 FASSIGNMENT.vo
 Z5 L0 31
@@ -23,12 +23,12 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1570558447.000000
-Z8 !s107 ASSIGNMENT.vo|
-Z9 !s90 -work|work|ASSIGNMENT.vo|
+!s108 1570885120.000000
+Z7 !s107 ASSIGNMENT.vo|
+Z8 !s90 -work|work|ASSIGNMENT.vo|
 !i113 1
-Z10 o-work work
-Z11 tCvgOpt 0
+Z9 o-work work
+Z10 tCvgOpt 0
 n@a@s@s@i@g@n@m@e@n@t
 vASSIGNMENT_vlg_vec_tst
 R1
@@ -37,23 +37,23 @@ R1
 IiIjhL^:P?53S:ne9W01l]3
 R2
 R0
-w1570558446
+w1570885115
 8Waveform.vwf.vt
 FWaveform.vwf.vt
-Z12 L0 29
+Z11 L0 29
 R6
 r1
 !s85 0
 31
-R7
+!s108 1570885121.000000
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
+R9
 R10
-R11
 n@a@s@s@i@g@n@m@e@n@t_vlg_vec_tst
 vDMUX
-Z13 !s110 1570206499
+Z12 !s110 1570206499
 !i10b 1
 !s100 =mlUW1[SgNWm<FXI`O[1i2
 ImAjUFjdHNZ?Ak;<<K=k6f1
@@ -67,15 +67,15 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1570206499.000000
+Z13 !s108 1570206499.000000
+R7
 R8
-R9
 !i113 1
+R9
 R10
-R11
 n@d@m@u@x
 vDMUX_vlg_vec_tst
-R13
+R12
 !i10b 1
 !s100 6o88]8[<;ai`@iJJ<>JFb2
 ISj5Lj^^m0QZdX8cF0cNzJ3
@@ -84,15 +84,15 @@ R0
 w1570206498
 8Waveform5.vwf.vt
 FWaveform5.vwf.vt
-R12
+R11
 R6
 r1
 !s85 0
 31
-R14
+R13
 !s107 Waveform5.vwf.vt|
 !s90 -work|work|Waveform5.vwf.vt|
 !i113 1
+R9
 R10
-R11
 n@d@m@u@x_vlg_vec_tst
